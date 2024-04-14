@@ -16,7 +16,7 @@ char caesar_shift(char c, int key) {
   }
   if (isdigit(c)) {
     if (shift_c > '9') return ('0' - 1) + (shift_c - '9');
-    if (shift_c < '9') return ('9' + 1) - ('0' - shift_c);
+    if (shift_c < '0') return ('9' + 1) - ('0' - shift_c);
   }
   return (char)c + key;
 }
